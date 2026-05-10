@@ -1,12 +1,32 @@
-# Horizons — Nonprofit Website Template
+# Horizons — Nonprofit Platform for Global Impact
 
 A modern, minimalistic nonprofit website template built for the **Next.js UI/UX Hackathon**.
+
+A nonprofit web platform capable of presenting real-world humanitarian initiatives such as clean water access, education, food security, climate resilience, and digital empowerment programs.
+
+The platform combines modern frontend architecture with elegant visual storytelling to create an immersive and responsive experience across desktop and mobile devices.
+
+---
 
 ## Stack
 - **Next.js 14** (App Router)
 - **Tailwind CSS** (custom design tokens)
 - **TypeScript**
 - **Lucide React** (icons)
+
+---
+
+## Live Demo
+
+🔗 [Live Website](https://non-profit-organization-seven.vercel.app/)
+
+---
+
+## GitHub Repository
+
+🔗 [GitHub Repository](https://github.com/KhushiY215/Non-Profit-Organization)
+
+---
 
 ## Design System
 | Token | Value |
@@ -51,6 +71,16 @@ To connect a real payment processor (Stripe recommended):
 2. Create `/api/create-payment-intent/route.ts`
 3. Replace the form submit handler in `app/donate/page.tsx`
 
+## Features
+
+- Responsive modern UI/UX
+- Dynamic program detail pages
+- Multi-step donation workflow
+- Reusable component architecture
+- Tailwind CSS design system
+- Next.js App Router implementation
+- Optimized responsive layouts
+  
 ## Submission
 Built by: Khushi 
 
