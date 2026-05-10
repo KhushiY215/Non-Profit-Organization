@@ -52,9 +52,8 @@ To connect a real payment processor (Stripe recommended):
 3. Replace the form submit handler in `app/donate/page.tsx`
 
 ## Submission
-Built by: [Your Name]  
-Submission email: jusrin@crowdera.com  
-Deadline: 11 May 2026 | 11:59 PM IST
+Built by: Khushi 
+
 
 ```
 nonprofit-template
