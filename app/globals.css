@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap");
+
+:root {
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
+  --color-forest: #1b3a2d;
+  --color-forest-light: #2a5a44;
+  --color-terra: #c4622d;
+  --color-cream: #f7f3ed;
+  --color-cream-dark: #ede8df;
+  --color-sand: #d4c9b5;
+  --color-ink: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated underline for links */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Staggered animation utilities */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+
+/* Opacity-0 for staggered reveal */
+.opacity-0-init {
+  opacity: 0;
+}
+
+/* Grain texture overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.04;
+}
+
+/* Horizontal rule with ornament */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-sand);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-sand); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-forest-light); }
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-terra);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-terra), var(--color-forest-light));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
